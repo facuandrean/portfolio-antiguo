@@ -38,6 +38,8 @@ html {
 body {
     overflow-x: hidden;
     margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 img {
@@ -80,7 +82,67 @@ button:hover {
 
 /* Site properties and components */
 
+.container {
+    min-width: 320px;
+    max-width: 1200px;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid blue
+}
 
+.header {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1200px;
+    height: 10vh;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+    position: fixed;
+    bottom: 0;
+}
+
+.header-logo {
+    width: 70%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold ;
+    padding-left: 1rem;
+    border: 1px solid red;
+}
+
+.header-nav {
+    width: 20%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    border: 1px solid red;
+}
+
+.header-nav__ul-mobile {
+    width: 100%;
+    height: auto;
+    padding: .5rem;
+    background-color: #54AFE1;
+    position: fixed;
+    bottom: 10vh;
+    left: 0;
+}
+
+.h-n-ul__li-mobile,
+.h-n-ul__li-desktop {
+    padding: .5rem;
+    text-align: center;
+}
 
 /* Utilities */
 
@@ -94,3 +156,31 @@ button:hover {
 
 /* mediaqueries */
 
+@media screen and (min-width:1024px) {
+
+    .header-logo {
+        width: 20%;
+        justify-content: center;
+    }
+
+    .header-nav {
+        width: 70%;
+    }
+    
+    .header-nav__ul-desktop {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid blue;
+    }
+    .h-n-ul__li-desktop{
+        border: 1px solid red;
+        margin-right: 10px;
+    }
+    .h-n-ul__li-desktop:nth-child(4){
+        border: 1px solid red;
+        margin-right: 120px;
+    }
+
+}
