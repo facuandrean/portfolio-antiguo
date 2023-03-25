@@ -131,16 +131,25 @@ button:hover {
     width: 100%;
     height: auto;
     padding: .5rem;
-    background-color: #54AFE1;
+    background-color: rgb(189, 189, 175);
     position: fixed;
     bottom: 10vh;
     left: 0;
-    z-index: 999;
+    /* para que aparezca o desaparezca el nav */
+    opacity: 0;
+    transition: opacity .5s ease;
+    pointer-events: none; /* le dice al navegador que cuando pongamos el raton encima de algo, no haya interactividad */
+}
+
+.header-nav__ul-mobile.is-active {
+    /* esta clase es la que me permite aparecer el menu de hamburguesa */
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .h-n-ul__li-mobile,
 .h-n-ul__li-desktop {
-    padding: .5rem;
+    padding: 1rem;
     text-align: center;
 }
 

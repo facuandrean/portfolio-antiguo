@@ -30,6 +30,8 @@ w.addEventListener('resize', (e) => {
         }
     } else {
         /* La pantalla tiene menos de 1024 píxeles de ancho */
+        $navMobile.classList.remove('none');
+        $navMobile.classList.remove('is-active');
         $navDesktop.classList.add('none');
         $btnHamburger.classList.remove('none');
     }
@@ -39,12 +41,19 @@ d.addEventListener('click', (e) => {
 
     if ((e.target.matches('.btn-hamburger')) || (e.target.matches('.btn-hamburger *'))) {
         $btnHamburger.classList.toggle('is-active');
-
+        
         if (!$btnHamburger.classList.contains('is-active')) {
-            $navMobile.classList.add('none');
+            $navMobile.classList.remove('is-active');
         } else {
-            $navMobile.classList.remove('none');
+            $navMobile.classList.add('is-active');
         }
+        
+    }
+    if(e.target.matches(".header-nav__ul-mobile li a")) {
+        $navMobile.classList.remove("is-active");
+        $btnHamburger.classList.toggle('is-active');
+    } else {
+        return false;
     }
 
 });
