@@ -1,8 +1,6 @@
 const d = document;
 const w = window;
 
-// botón de hamburguesa
-
 const $btnHamburger = d.querySelector('.btn-hamburger');
 const $navMobile = d.querySelector('.header-nav__ul-mobile');
 const $navDesktop = d.querySelector('.header-nav__ul-desktop');

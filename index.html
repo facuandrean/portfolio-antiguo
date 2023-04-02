@@ -21,10 +21,10 @@
         <nav class="header-nav">
             <ul class="header-nav__ul-desktop none">
                 <li class="h-n-ul__li-desktop">
-                    <a href="#" class="h-n-ul-li__a">Inicio</a>
+                    <a href="#presentacion" class="h-n-ul-li__a">Inicio</a>
                 </li>
                 <li class="h-n-ul__li-desktop">
-                    <a href="#" class="h-n-ul-li__a">Sobre mí</a>
+                    <a href="#sobreMi" class="h-n-ul-li__a">Sobre mí</a>
                 </li>
                 <li class="h-n-ul__li-desktop">
                     <a href="#" class="h-n-ul-li__a">Servicios</a>
@@ -38,10 +38,10 @@
             </ul>
             <ul class="header-nav__ul-mobile">
                 <li class="h-n-ul__li-mobile">
-                    <a href="#" class="h-n-ul-li__a">Inicio</a>
+                    <a href="#presentacion" class="h-n-ul-li__a">Inicio</a>
                 </li>
                 <li class="h-n-ul__li-mobile">
-                    <a href="#" class="h-n-ul-li__a">Sobre mí</a>
+                    <a href="#sobreMi" class="h-n-ul-li__a">Sobre mí</a>
                 </li>
                 <li class="h-n-ul__li-mobile">
                     <a href="#" class="h-n-ul-li__a">Servicios</a>
@@ -63,14 +63,15 @@
     </header>
 
     <main class="container">
-        <section class="main-presentacion">
 
-            <!-- seccion presentacion -->
+        <!-- seccion presentacion -->
+        
+        <section class="main-presentacion" id="presentacion">
 
             <section class="main-presentacion__texto">
                 <h1>¡Hola! Soy Facundo,</h1>
                 <h3>Desarrollador Web Frontend</h3>
-                <a href="#" >¡Conóceme!</a>
+                <a href="#sobreMi" >¡Conóceme!</a>
             </section>
             
             <section class="main-presentacion__imagen">
@@ -80,12 +81,56 @@
             </section>
 
         </section>
+
         <!-- seccion sobre mi -->
-        <section class="main-sobreMi">
-            
+
+        <section class="main-sobreMi" id="sobreMi">
+            <h2 class="main-sobreMi__h2">Sobre mí...</h2>
+            <div class="main-sobreMi__seccion">
+
+                <article class="m-sM-s__biografia">
+                    <p>
+                        Estudiante de Ingeniería en Sistemas.
+                        
+                        <br>
+                        <br>
+        
+                        Apasionado por la programación, donde me estoy especializando en la rama del Desarrollo Web, principalmente en el mundo del Frontend. Disfruto llevar a cabo la maquetación e interactividad de interfaces web, así como la optimización, para el buen posicionamiento y el rendimiento de carga de sitios y aplicaciones web.
+                        
+                        <br>
+                        <br>
+        
+                        Aunque actualmente me estoy profesionalizando por el lado del Frontend, anhelo con muchas ganas y ansias el conocer el mundo del Backend, para asi poder consolidarme como Desarrollador Web, pero como dicen por ahí: "paso a paso".
+                        
+                        <br>
+                        <br>
+        
+                        Siempre en constante aprendizaje, tratando de ampliar tanto mis conocimientos como mis habilidades.
+                    </p>
+
+                    <button>Descargar CV</button>
+
+                </article>
+
+                <article class="m-sM-s__habilidades">
+                    <h3>Mis habilidades</h3>
+                    <ul>
+                        <li> <i class="fa-brands fa-html5"></i> HTML</li>
+                        <li> <i class="fa-brands fa-css3-alt"></i> CSS</li>
+                        <li> <i class="fa-solid fa-desktop"></i> <i class="fa-solid fa-mobile"></i> Responsive Design</li>
+                        <li> <i class="fa-brands fa-square-js"></i> JavaScript</li>
+                        <li> <i class="fa-brands fa-python"></i> Python - Básico</li>
+                        <li> <i class="fa-brands fa-markdown"></i> Markdown</li>
+                        <li> <i class="fa-brands fa-git-alt"></i> <i class="fa-brands fa-github"></i> Git & GitHub</li>
+                        <li> <i class="fa-solid fa-terminal"></i> Manejo básico de terminal de comandos</li>
+                    </ul>
+                </article>
+            </div>
         </section>
+        
     </main>
     
+    <script src="https://kit.fontawesome.com/489d45fb25.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
