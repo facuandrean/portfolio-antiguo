@@ -35,6 +35,23 @@ html {
     box-sizing: inherit;
 }
 
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgb(189, 189, 175);
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #383838;
+}
+
 body {
     overflow-x: hidden;
     margin: 0;
@@ -138,8 +155,16 @@ button:hover {
 }
 
 .container > section {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    margin-bottom: 15vh;
+}
+
+.main-section-title {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .main-presentacion {
@@ -205,13 +230,6 @@ button:hover {
     height: auto;
 }
 
-.main-sobreMi__h2 {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-}
-
 .main-sobreMi__seccion {
     display: flex;
     flex-direction: column;
@@ -256,6 +274,42 @@ button:hover {
 .m-sM-s__habilidades li {
     padding: 1rem;
     font-weight: 500;
+}
+
+.main-servicios {
+    width: 100%;
+    height: auto;
+}
+
+.main-containerTarjetas {
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem 0rem;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+    grid-gap: 1rem;
+}
+
+.main-containerTarjetas__tarjetaServicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.main-containerTarjetas__tarjetaServicio p {
+    margin:0;
+    font-weight: 500;
+}
+
+.main-containerTarjetas__tarjetaServicio svg,
+.main-containerTarjetas__tarjetaServicio img {
+    width: 35px;
+    height: 35px;
 }
 
 /* Utilities */
@@ -443,6 +497,11 @@ button:hover {
         margin: 0;
     }
 
+    .main-servicios {
+        width: 100%;
+        height: auto !important;
+    }
+
 }
 
 @media screen and (min-width:1440px) {
@@ -491,7 +550,7 @@ button:hover {
         height: 350px;
     }
 
-    .main-sobreMi__h2 {
+    .main-section-title {
         font-size: 2rem;
     }
 
@@ -556,7 +615,7 @@ button:hover {
         height: 400px;
     }
 
-    .main-sobreMi__h2 {
+    .main-section-title {
         font-size: 3rem;
     }
 
@@ -571,5 +630,18 @@ button:hover {
     .m-sM-s__biografia p {
         font-size: 1.8rem;
     }
-    
+
+    .main-containerTarjetas__tarjetaServicio svg,
+    .main-containerTarjetas__tarjetaServicio img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .main-containerTarjetas__tarjetaServicio h3 {
+        font-size: 2rem;
+    }
+       
+    .main-containerTarjetas__tarjetaServicio p {
+        font-size: 1.5rem;
+    }
 }
