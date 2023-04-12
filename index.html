@@ -30,10 +30,10 @@
                     <a href="#servicios" class="h-n-ul-li__a">Servicios</a>
                 </li>
                 <li class="h-n-ul__li-desktop">
-                    <a href="#" class="h-n-ul-li__a">Portafolio</a>
+                    <a href="#portfolio" class="h-n-ul-li__a">Portafolio</a>
                 </li>
                 <li class="h-n-ul__li-desktop">
-                    <a href="#" class="h-n-ul-li__a">¡Contáctame!</a>
+                    <a href="#contacto" class="h-n-ul-li__a">¡Contáctame!</a>
                 </li>
             </ul>
             <ul class="header-nav__ul-mobile">
@@ -47,10 +47,10 @@
                     <a href="#servicios" class="h-n-ul-li__a">Servicios</a>
                 </li>
                 <li class="h-n-ul__li-mobile">
-                    <a href="#" class="h-n-ul-li__a">Portafolio</a>
+                    <a href="#portfolio" class="h-n-ul-li__a">Portafolio</a>
                 </li>
                 <li class="h-n-ul__li-mobile">
-                    <a href="#" class="h-n-ul-li__a">¡Contáctame!</a>
+                    <a href="#contacto" class="h-n-ul-li__a">¡Contáctame!</a>
                 </li>
             </ul>
             <button class="btn-hamburger hamburger hamburger--squeeze" type="button">
@@ -184,8 +184,103 @@
 
 
         </section>
+
+        <!-- seccion portfolio -->
+
+        <section class="main-portfolio" id="portfolio">
+            <h2 class="main-section-title">Mis trabajos</h2>
+            <div class="main-containerTarjetas">
+                <a href="#maquetaciones-simples" class="main-containerTarjetas__enlace">
+                    <article class="main-containerTarjetas__tarjetaPortfolio">
+                        <h3>Maquetaciones simples</h3>
+                    </article>
+                </a>
+                <a href="#practicas-dom" class="main-containerTarjetas__enlace">
+                    <article class="main-containerTarjetas__tarjetaPortfolio">
+                        <h3>Prácticas del DOM</h3>
+                    </article>
+                </a>
+                <a href="#practicas-apis" class="main-containerTarjetas__enlace">
+                    <article class="main-containerTarjetas__tarjetaPortfolio">
+                        <h3>Prácticas con API's</h3>
+                    </article>
+                </a>
+                <a href="#proyectos-personales" class="main-containerTarjetas__enlace">
+                    <article class="main-containerTarjetas__tarjetaPortfolio">
+                        <h3>Proyectos personales</h3>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <article class="modal" id="maquetaciones-simples">
+
+            <div class="modal-content__header">
+
+                <a href="#close" class="modal-content__header-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"/></svg>
+                </a>
+
+                <h3 class="modal-content__header-title">Maquetaciones simples</h3>
+
+            </div>
+
+            <div class="modal-content__main">
+                
+                <div class="modal-content__main-tarjeta">
+                    <h3>Fylo landing page</h3>
+                    <a href="https://facuandrean.github.io/fylo-landing-page/" target="_blank">
+                        <img src="assets/fylo-landing-page.jpg" alt="fylo landing page">
+                    </a>
+                    <p>¡Haz click en la imagen para ver el proyecto!</p>
+                </div>
+
+                <div class="modal-content__main-tarjeta">
+                    <h3>Interactive Rating Component</h3>
+                    <a href="https://facuandrean.github.io/interactive-rating-component/" target="_blank">
+                        <img src="assets/interactive-rating-component.jpg" alt="interactive-rating-component">
+                    </a>
+                    <p>¡Haz click en la imagen para ver el proyecto!</p>
+                </div>
+
+                <div class="modal-content__main-tarjeta">
+                    <h3>News Homepage Main</h3>
+                    <a href="https://facuandrean.github.io/news-homepage-main/" target="_blank">
+                        <img src="assets/new-homepage-main.jpg" alt="new-homepage-main">
+                    </a>
+                    <p>¡Haz click en la imagen para ver el proyecto!</p>
+                </div>
+
+                <div class="modal-content__main-tarjeta">
+                    <h3>Testimonials Grid Section Main</h3>
+                    <a href="https://facuandrean.github.io/testimonials-grid-section-main/" target="_blank">
+                        <img src="assets/testimonials-grid.jpg" alt="testimonials-grid">
+                    </a>
+                    <p>¡Haz click en la imagen para ver el proyecto!</p>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="modal none" id="practicas-dom">
+            <i class="fa-solid fa-xmark-large" style="color: #ffffff;"></i>
+            
+        </article>
+
+        <article class="ventana-modal none" id="practicas-apis">
+            <i class="fa-solid fa-xmark-large" style="color: #ffffff;"></i>
+            
+        </article>
+        <article class="ventana-modal none" id="proyectos-personales">
+            <i class="fa-solid fa-xmark-large" style="color: #ffffff;"></i>
+    
+        </article>
         
     </main>
+
     
     <script src="https://kit.fontawesome.com/489d45fb25.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>

@@ -5,6 +5,8 @@ const $btnHamburger = d.querySelector('.btn-hamburger');
 const $navMobile = d.querySelector('.header-nav__ul-mobile');
 const $navDesktop = d.querySelector('.header-nav__ul-desktop');
 
+const $modalPortfolio = d.querySelector('.modal');
+
 d.addEventListener('DOMContentLoaded', (e) => {
     if (window.matchMedia("(min-width: 1024px)").matches) {
         /* La pantalla tiene al menos 1024 píxeles de ancho */
@@ -37,6 +39,19 @@ w.addEventListener('resize', (e) => {
 
 d.addEventListener('click', (e) => {
 
+    if (e.target.matches('.main-containerTarjetas__enlace') || e.target.matches('.main-containerTarjetas__enlace *')) {
+        // $modalPortfolio.classList.remove('hidden');
+        $modalPortfolio.style.opacity = 1;
+        $modalPortfolio.style.pointerEvents = 'all';
+    }
+    
+    if (e.target.matches('.modal a[href="#close"]') || e.target.matches('.modal a[href="#close"] *')) {
+        console.log('se hizo click en la cruz');
+        // $modalPortfolio.classList.add('hidden');
+        $modalPortfolio.style.opacity = 0;
+        $modalPortfolio.style.pointerEvents = 'none';
+    }
+    
     if ((e.target.matches('.btn-hamburger')) || (e.target.matches('.btn-hamburger *'))) {
         $btnHamburger.classList.toggle('is-active');
         
@@ -47,11 +62,14 @@ d.addEventListener('click', (e) => {
         }
         
     }
+    
     if(e.target.matches(".header-nav__ul-mobile li a")) {
         $navMobile.classList.remove("is-active");
         $btnHamburger.classList.toggle('is-active');
     } else {
         return false;
     }
+    
+    
 
 });
