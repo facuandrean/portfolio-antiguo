@@ -189,31 +189,31 @@
 
         <section class="main-portfolio" id="portfolio">
             <h2 class="main-section-title">Mis trabajos</h2>
-            <div class="main-containerTarjetas">
+            <div class="main-containerTarjetas" id="container-tarjetas-portfolio">
                 <a href="#maquetaciones-simples" class="main-containerTarjetas__enlace">
-                    <article class="main-containerTarjetas__tarjetaPortfolio">
+                    <article class="main-containerTarjetas__tarjetaPortfolio" id="tarjeta-1">
                         <h3>Maquetaciones simples</h3>
                     </article>
                 </a>
-                <a href="#practicas-dom" class="main-containerTarjetas__enlace">
-                    <article class="main-containerTarjetas__tarjetaPortfolio">
+                <a href="https://facuandrean.github.io/ejercicios-dom/" class="main-containerTarjetas__enlace" target="_blank">
+                    <article class="main-containerTarjetas__tarjetaPortfolio"  id="tarjeta-2">
                         <h3>Prácticas del DOM</h3>
                     </article>
                 </a>
                 <a href="#practicas-apis" class="main-containerTarjetas__enlace">
-                    <article class="main-containerTarjetas__tarjetaPortfolio">
+                    <article class="main-containerTarjetas__tarjetaPortfolio" id="tarjeta-3">
                         <h3>Prácticas con API's</h3>
                     </article>
                 </a>
                 <a href="#proyectos-personales" class="main-containerTarjetas__enlace">
-                    <article class="main-containerTarjetas__tarjetaPortfolio">
+                    <article class="main-containerTarjetas__tarjetaPortfolio"  id="tarjeta-4">
                         <h3>Proyectos personales</h3>
                     </article>
                 </a>
             </div>
         </section>
 
-        <article class="modal" id="maquetaciones-simples">
+        <article class="modal tarjeta-1" id="maquetaciones-simples">
 
             <div class="modal-content__header">
 
@@ -263,22 +263,82 @@
 
         </article>
 
+        <article class="modal tarjeta-3" id="practicas-apis">
 
+            <div class="modal-content__header">
 
-        <article class="modal none" id="practicas-dom">
-            <i class="fa-solid fa-xmark-large" style="color: #ffffff;"></i>
-            
+                <a href="#close" class="modal-content__header-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"/></svg>
+                </a>
+
+                <h3 class="modal-content__header-title">Prácticas APIs</h3>
+
+            </div>
+
+            <div class="modal-content__main">
+                
+                <div class="modal-content__main-tarjeta">
+                    <h3>Formulario con Fetch y FormSubmit</h3>
+                    <a href="https://facuandrean.github.io/form-formSubmit/" target="_blank">
+                        <img src="assets/formulario.png" alt="formulario">
+                    </a>
+                    <p>¡Haz click en la imagen para ver el proyecto!</p>
+                </div>
+
+                <div class="modal-content__main-tarjeta">
+                    <h3>PokeAPI</h3>
+                    <a href="https://facuandrean.github.io/pokeapi/" target="_blank">
+                        <img src="assets/pokeapi.png" alt="pokeapi">
+                    </a>
+                    <p>¡Haz click en la imagen para ver el proyecto!</p>
+                </div>
+
+                <div class="modal-content__main-tarjeta">
+                    <h3>Advice generator</h3>
+                    <a href="https://facuandrean.github.io/advice-generator/" target="_blank">
+                        <img src="assets/advicegenerator.png" alt="Advice generator">
+                    </a>
+                    <p>¡Haz click en la imagen para ver el proyecto!</p>
+                </div>
+
+            </div>
+
         </article>
 
-        <article class="ventana-modal none" id="practicas-apis">
-            <i class="fa-solid fa-xmark-large" style="color: #ffffff;"></i>
-            
+        <article class="modal tarjeta-4" id="proyectos-personales">
+
+            <div class="modal-content__header">
+
+                <a href="#close" class="modal-content__header-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"/></svg>
+                </a>
+
+                <h3 class="modal-content__header-title">Proyectos personales</h3>
+
+            </div>
+
+            <div class="modal-content__main">
+                
+                <div class="modal-content__main-tarjeta">
+                    <h3>Calculadora de promedios</h3>
+                    <a href="https://facuandrean.github.io/calculadora-de-promedios/" target="_blank">
+                        <img src="assets/calculadora-promedios.png" alt="calculadora-de-promedios">
+                    </a>
+                    <p>¡Haz click en la imagen para ver el proyecto!</p>
+                </div>
+
+                <div class="modal-content__main-tarjeta">
+                    <h3>Fifa team draw</h3>
+                    <a href="https://facuandrean.github.io/fifa-team-draw/" target="_blank">
+                        <img src="assets/sorteo-equipos.png" alt="Fifa-team-draw">
+                    </a>
+                    <p>¡Haz click en la imagen para ver el proyecto! (No responsivo)</p>
+                </div>
+
+            </div>
+
         </article>
-        <article class="ventana-modal none" id="proyectos-personales">
-            <i class="fa-solid fa-xmark-large" style="color: #ffffff;"></i>
-    
-        </article>
-        
+
     </main>
 
     

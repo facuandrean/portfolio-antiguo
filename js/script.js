@@ -5,7 +5,32 @@ const $btnHamburger = d.querySelector('.btn-hamburger');
 const $navMobile = d.querySelector('.header-nav__ul-mobile');
 const $navDesktop = d.querySelector('.header-nav__ul-desktop');
 
-const $modalPortfolio = d.querySelector('.modal');
+const $tarjetasPortfolio = d.querySelectorAll('.main-containerTarjetas__tarjetaPortfolio');
+const $modalPortfolio = d.querySelectorAll('.modal');
+
+function modalPortfolio(idTarjeta) {
+    $modalPortfolio.forEach(modal => {
+        if (modal.className.includes(idTarjeta)) {
+            modal.style.opacity = 1;
+            modal.style.pointerEvents = 'all';
+        }
+        modal.addEventListener('click', (e) => {
+            if (e.target.matches('.modal a[href="#close"]') || e.target.matches('.modal a[href="#close"] *')) {
+                modal.style.opacity = 0;
+                modal.style.pointerEvents = 'none';
+            }
+        })
+    });
+}
+
+$tarjetasPortfolio.forEach(tarjeta => {
+    console.log(tarjeta)
+    tarjeta.addEventListener('click', () => {
+        console.log(tarjeta.id)
+        modalPortfolio(tarjeta.id)
+    })
+});
+
 
 d.addEventListener('DOMContentLoaded', (e) => {
     if (window.matchMedia("(min-width: 1024px)").matches) {
@@ -38,19 +63,6 @@ w.addEventListener('resize', (e) => {
 });
 
 d.addEventListener('click', (e) => {
-
-    if (e.target.matches('.main-containerTarjetas__enlace') || e.target.matches('.main-containerTarjetas__enlace *')) {
-        // $modalPortfolio.classList.remove('hidden');
-        $modalPortfolio.style.opacity = 1;
-        $modalPortfolio.style.pointerEvents = 'all';
-    }
-    
-    if (e.target.matches('.modal a[href="#close"]') || e.target.matches('.modal a[href="#close"] *')) {
-        console.log('se hizo click en la cruz');
-        // $modalPortfolio.classList.add('hidden');
-        $modalPortfolio.style.opacity = 0;
-        $modalPortfolio.style.pointerEvents = 'none';
-    }
     
     if ((e.target.matches('.btn-hamburger')) || (e.target.matches('.btn-hamburger *'))) {
         $btnHamburger.classList.toggle('is-active');
@@ -70,6 +82,4 @@ d.addEventListener('click', (e) => {
         return false;
     }
     
-    
-
 });
