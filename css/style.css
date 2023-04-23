@@ -345,7 +345,7 @@ button:hover {
     bottom: 2vh;
     right: 2vh;
     z-index: 999;
-    background-color: #1a1919e0;
+    background-color: #1a1919f8;
     transition: all 1s;
     pointer-events: none;
     opacity: 0;
@@ -363,40 +363,23 @@ button:hover {
 .modal-content__header-close {
     width: 20%;
     height: 100%;
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2vh;
 }
 
 .modal-content__header-close svg {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     fill: beige;
 }
 
-.modal[id|="trabajo"]:target {
-    /* yo se que el elemento que tiene la clase modal, tiene un id llamado trabajo-1, recordar que trabajo-1 es un id que lo va a activar el enlace que apunta a ese id, entonces en css hay una pseudoclase llamada :target que lo que hace es controlar cuándo un elemento está activado. Si nos fijamos en la url, aparecen y desaparecen ids, cuando aparecen, target significa que está activado para ese elemento, entonces se van a aplicar las siguientes propiedades */
-    opacity: 1;
-    pointer-events: auto;
-
-    /* Ahora lo que tendríamos que hacer es darle estas dos propiedades a cada ventana modal, y lo mas razonable sería poner comas en el selector y poner lo siguiente:
-    .modal#trabajo-1:target,
-    .modal#trabajo-2:target,
-    .modal#trabajo-3:target,
-     y así sucesivamente dependiendo de cuantas ventanas modales tengamos.
-
-    Pero hay una mejor forma y es a través del selector atributo, entonces tendríamos que poner lo siguiente:
-
-    .modal[id|="trabajo"]
-
-    el | (vip se llama creo) significa que lo que va a validar el selector css es que cualquier ventana modal que en su atributo id empiece con la palabra trabajo, se va a activar. */
-}
-
-.modal-content__header-title,
-.modal-content__main h3 {
+.modal-content__header-title{
     padding: 0;
-    margin: 2rem .8rem 2rem;
+    margin-left: 1rem;
     color: beige;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -404,31 +387,55 @@ button:hover {
     width: 100%;
     height: 90%;
     overflow-y: auto;
-    display: grid;
-    /* place-content: center; */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
-    grid-gap: 1rem;
     padding: .5rem .5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
 .modal-content__main-tarjeta {
     text-align: center;
     width: 100%;
-    height: 400px;
-    padding: 1rem;
-    /* border: 1px solid white; */
+    height: auto;
+    padding: .5rem;
+    margin-bottom: 5vh;
 }
 
-.modal-content__main h3 {
-    text-align: center;
+.modal-content__main-tarjeta h3 {
     font-size: 1.3rem;
-    margin: .5rem 0rem 2rem 0rem;
+    height: 10vh;
+    width: 100%;
+    color: beige;
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content__main-tarjeta a {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content__main-tarjeta a img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
 }
 
 .modal-content__main p {
     padding: 0;
+    margin: 0;
     color: beige;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Utilities */
@@ -484,6 +491,27 @@ button:hover {
     .main-presentacion__imagen figure {
         width: 250px;
         height: 250px;
+    }
+
+    .modal-content__header-close {
+        width: 7%;
+    }
+
+    .modal-content__header-close svg {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .modal-content__header-title{
+        font-size: 1.25rem;
+    }
+    
+    .modal-content__main-tarjeta h3 {
+        font-size: 1rem;
+    }
+
+    .modal-content__main p {
+        font-size: .9rem;
     }
 
 }
@@ -623,6 +651,23 @@ button:hover {
         padding-bottom: 0 !important;
     }
 
+    .modal-content__header-close {
+        width: 5%;
+    }
+
+    .modal-content__header-close svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .modal-content__header-title{
+        font-size: 1.4rem;
+    }
+
+    .modal-content__main-tarjeta a {
+        height: 35vh;
+    }
+
 }
 
 @media screen and (min-width:1440px) {
@@ -684,6 +729,36 @@ button:hover {
     }
 
     .m-sM-s__biografia p {
+        font-size: 1.3rem;
+    }
+
+    .main-containerTarjetas__tarjetaPortfolio {
+        height: 14vh;
+        font-size: 1.2rem;
+    }
+    
+    .modal-content__header-close svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .modal-content__header-title{
+        font-size: 1.9rem;
+    }
+
+    .modal-content__main {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .modal-content__main-tarjeta h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content__main-tarjeta a {
+        height: 40vh;
+    }
+
+    .modal-content__main p {
         font-size: 1.3rem;
     }
 
@@ -769,5 +844,35 @@ button:hover {
        
     .main-containerTarjetas__tarjetaServicio p {
         font-size: 1.5rem;
+    }
+
+    .main-containerTarjetas__tarjetaPortfolio {
+        height: 10vh;
+        font-size: 1.8rem;
+    }
+
+    .modal-content__header-close svg {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .modal-content__header-title{
+        font-size: 2.9rem;
+    }
+
+    .modal-content__main {
+        grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
+    }
+
+    .modal-content__main-tarjeta h3 {
+        font-size: 2.7rem;
+    }
+
+    .modal-content__main-tarjeta a {
+        height: 45vh;
+    }
+
+    .modal-content__main p {
+        font-size: 2rem;
     }
 }

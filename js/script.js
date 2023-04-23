@@ -24,9 +24,7 @@ function modalPortfolio(idTarjeta) {
 }
 
 $tarjetasPortfolio.forEach(tarjeta => {
-    console.log(tarjeta)
     tarjeta.addEventListener('click', () => {
-        console.log(tarjeta.id)
         modalPortfolio(tarjeta.id)
     })
 });
