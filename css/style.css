@@ -346,7 +346,7 @@ button:hover {
     right: 2vh;
     z-index: 999;
     background-color: #1a1919f8;
-    transition: all 1s;
+    transition: all .5s;
     pointer-events: none;
     opacity: 0;
 }
