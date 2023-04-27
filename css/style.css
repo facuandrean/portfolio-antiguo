@@ -438,6 +438,98 @@ button:hover {
     align-items: center;
 }
 
+
+.main-contacto {
+    width: 100%;
+    height: auto;
+}
+
+.contact-cards {
+    margin-top: 10vh;
+    margin-bottom: 4vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.contact-card {
+    border: 1px solid black;
+    width: 90%;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-card > svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.contact-form {
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border: 1px solid black;
+    margin-bottom: 10vh;
+}
+
+.contact-form > * {
+    padding: .5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 90%;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 1rem;
+    font-family: var(--font-primary);
+}
+
+.contact-form input[type="submit"] {
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form *::placeholder {
+    color: var(--color-1);
+}
+
+.contact-form [required]:valid {
+    border: thin solid var(--form-ok-color)
+}
+
+.contact-form [required]:invalid {
+    border: thin solid var(--form-error-color)
+}
+
+.contact-form-error {
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
 /* Utilities */
 
 .none {
@@ -512,6 +604,10 @@ button:hover {
 
     .modal-content__main p {
         font-size: .9rem;
+    }
+
+    .contact-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
 }
@@ -668,6 +764,16 @@ button:hover {
         height: 35vh;
     }
 
+    .main-contacto {
+        width: 100%;
+        height: auto !important;
+        padding-bottom: 0;
+    }
+
+    .contact-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
 }
 
 @media screen and (min-width:1440px) {
@@ -762,6 +868,17 @@ button:hover {
         font-size: 1.3rem;
     }
 
+    .contact-card h5 {
+        font-size: 1rem;
+    }
+    
+    .contact-card small {
+        font-size: .9rem;
+    }
+
+    .contact-form legend {
+        font-size: 1.3rem
+    }
 }
 
 @media screen and (min-width:2560px) {
@@ -875,4 +992,60 @@ button:hover {
     .modal-content__main p {
         font-size: 2rem;
     }
+
+    .contact-cards {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .contact-card h5 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-card small {
+        font-size: 1.4rem;
+    }
+
+    .contact-card > svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .social-media > a svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .contact-form legend {
+        font-size: 1.3rem
+    }
+
+    .contact-form {
+        --form-ok-color: #4caf50;
+        --form-error-color: #f44336;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        border: 1px solid black;
+        margin-bottom: 10vh;
+    }
+    
+    .contact-form > * {
+        padding: 1.5rem;
+    }
+
+    
+    .contact-form legend,
+    .contact-form-response {
+        font-size: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.5rem;
+    }
+
+    .contact-form *::placeholder {
+        color: var(--color-1);
+    }
+
 }
